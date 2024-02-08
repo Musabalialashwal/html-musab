@@ -1,0 +1,26 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+
+}
+.parent {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #eee;
+}
+
+.container {
+
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(197, 126, 126);
+
+}
+
+
