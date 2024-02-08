@@ -1,1 +1,64 @@
+/* Add some basic styling */
+body {
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+nav {
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+main {
+    padding: 20px;
+}
+footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+}
 
+/* Style the product grid and product elements */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+.product {
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+.product img {
+    width: 100%;
+    height: auto;
+}
+.product h3 {
+    margin-top: 10px;
+}
+.product p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.product button {
+    margin-top: 10px;
+}
