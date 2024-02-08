@@ -1,19 +1,123 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=7">
-        <link rel="stylesheet" href="./CSS/normalize.css">
-        <title>hello word!</title>
-    </head>
-    <body>
-            <div class="container">
-       
-                    
-                    <a class="btn btn-slide-8" href="">I'm a button</a>
-                   
-                </div>
-    
-    
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            padding: 20px;
+            text-align: center;
+            color: #333;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .header h2 {
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        .form {
+            padding: 20px;
+        }
+
+        .form input {
+            display: block;
+            width: 100%;
+            height: 40px;
+            margin: 10px 0;
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+            padding: 0 10px;
+        }
+
+        .form button {
+            display: block;
+            width: 100%;
+            height: 40px;
+            margin: 10px 0;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form button:hover {
+            background-color: #444;
+        }
+
+        .footer {
+            padding: 10px;
+            text-align: center;
+            color: #999;
+            border-top: 1px solid #e6e6e6;
+        }
+
+        .footer a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>تسجيل الدخول</h2>
+        </div>
+        <div class="form">
+            <form id="login-form" method="post" action="login.php">
+                <input type="email" name="email" id="email" placeholder="البريد الإلكتروني" required>
+                <input type="password" name="password" id="password" placeholder="كلمة المرور" required>
+                <button type="submit" name="submit" id="submit">تسجيل الدخول</button>
+            </form>
+        </div>
+        <div class="footer">
+            <p>ليس لديك حساب؟ <a href="register.php">سجل الآن</a></p>
+        </div>
     </div>
-    </body>
+    <script>
+        // الحصول على عناصر النموذج
+        var form = document.getElementById("login-form");
+        var email = document.getElementById("email");
+        var password = document.getElementById("password");
+        var submit = document.getElementById("submit");
+
+        // إضافة حدث النقر على زر الإرسال
+        submit.addEventListener("click", function(event) {
+            // منع الإرسال الافتراضي للنموذج
+            event.preventDefault();
+            // التحقق من صحة الإدخالات
+            if (email.value == "" || password.value == "") {
+                // إظهار رسالة خطأ
+                alert("يرجى إدخال البريد الإلكتروني وكلمة المرور");
+            } else {
+                // إرسال النموذج
+                form.submit();
+            }
+        });
+    </script>
+</body>
 </html>
